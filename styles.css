@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main_font-family: "lobster Two", sans-serif;
+  /* --sub_font-family: "Tahoma", sans-serif; */
+  --sub_font-family: "Georgia", serif;
+  /* --main-color: #8cc0de; */
+  --main-color: #faf0d7;
+  --sub-color: rgb(39, 39, 39);
+  --white: #fff;
+  --blue: #8cc0de;
+}
+
+/* ------------------------------------------NavBar------------------------------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+#main-nav {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  list-style-type: none;
+}
+
+#main-nav li a {
+  color: var(--sub-color);
+  text-decoration: none;
+  font-family: var(--sub_font-family);
+}
+
+/* --------------------------------------Hero Section------------------------------- */
+
+.hero {
+  background-color: rgb(151, 148, 148);
+  background-image: url(/images/Crochet-BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-main-text {
+  color: var(--main-color);
+  font-size: 3rem;
+  font-family: var(--main_font-family);
+  margin-left: 50px;
+}
+
+.hero-sub-text {
+  color: var(--white);
+  font-family: var(--sub_font-family);
+  font-size: 1rem;
+
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.hero-cta-btn {
+  background-color: var(--blue);
+  border-radius: 5px;
+  color: var(--sub-color);
+  font-family: var(--sub_font-family);
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 20px 40px;
+}
+
+.hero-cta-btn:hover {
+  background-color: var(--sub-color);
+  color: var(--main-color);
+}
+
+/* -------------------------------main---------------------------------- */
+
+h1 {
+  text-align: center;
+  font-family: var(--sub_font-family);
+  margin: 50px auto;
+}
+
+.project-1 {
+  display: flex;
+}
+
+/* -----------------------------------Media Queries--------------------------------- */
+
+@media all and (max-width: 600px) {
+  /* #main-nav {
+    background: rgba(140, 192, 222, 0.7);
+    backdrop-filter: blur(0.5rem);
+    flex-direction: column;
+    gap: 1.5rem;
+    inset: 0 0 0 30%;
+    padding: min(30vh, 5em);
+    position: fixed;
+  } */
+  #main-nav li a {
+    color: var(--white);
+  }
+  .hero-cta-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .hero-main-text {
+    font-size: 4rem;
+  }
+  .hero-sub-text {
+    max-width: 75%;
+  }
+  .hero-cta-btn {
+    font-size: 1rem;
+    padding: 15px 30px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .hero-sub-text {
+    max-width: 70%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .hero-main-text {
+    font-size: 7rem;
+  }
+  .hero-sub-text {
+    font-size: 1.5rem;
+    max-width: 65%;
+  }
+}
