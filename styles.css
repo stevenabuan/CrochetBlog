@@ -147,6 +147,6 @@ h1 {
   }
   .hero-sub-text {
     font-size: 1.5rem;
-    max-width: 65%;
+    max-width: 900px;
   }
 }
